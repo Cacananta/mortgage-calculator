@@ -4,7 +4,7 @@
   "description": "Base application setup for creating a new react project.",
   "main": "server/index.js",
   "scripts": {
-    "build": "npm run less && webpack",
+    "build": "npm run less && webpack -w",
     "start": "npm run build && node server",
     "less": "lessc src/css/style.less dist/css/style.css",
     "lint": "eslint .",
@@ -36,6 +36,7 @@
     "babel-register": "^6.4.3",
     "chai-as-promised": "^5.3.0",
     "chai-http": "^3.0.0",
+    "css-loader": "^0.28.7",
     "csx": "^4.0.0",
     "enzyme": "^2.4.1",
     "eslint": "^3.15.0",
@@ -52,6 +53,7 @@
     "react-addons-test-utils": "^15.6.0",
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0",
+    "style-loader": "^0.19.0",
     "url-loader": "^0.5.9"
   },
   "repository": {
