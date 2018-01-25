@@ -34,7 +34,6 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
         <div className="container text-center">
           <div className="row my-3">
             <div className="col-lg-4">
@@ -56,14 +55,17 @@ export default class App extends React.Component {
               </div>
             </div>
           </div>
-          <div>
-            <button name="submit" onClick={this.handleSubmit} className="btn btn-info">Calculate Mortgage Payment</button>
+          <div className="row">
+            <div className="col-lg-12">
+              <button name="submit" onClick={this.handleSubmit} className="btn btn-info">Calculate Mortgage Payment</button>
+            </div>
           </div>
-        </div>
-
-
-        {!this.state.output ? <div></div> : <div id="output"><h3>${this.state.output} is your payment</h3></div>}
-      </div >
+          <div className="row">
+            <div className="col-lg-12">
+          {!this.state.output ? <div className="my-3"></div> : <div id="output"><h1 className="text-center my-3">Your monthly payment is ${this.state.output}</h1></div>}
+          </div>
+        </div >
+      </div>
     );
   }
 }
